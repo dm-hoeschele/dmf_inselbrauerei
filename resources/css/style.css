@@ -1,0 +1,496 @@
+/* fonts and variables */
+:root {
+    --main-text-color: rgb(35, 31, 32);
+  }
+
+/* genereal */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--main-text-color);
+    background-color: #eeece4;
+}
+/* mobile width: 375px */
+/* navbar */
+.nav-wrapper {
+    width: 100%;
+    height: 8rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    z-index: 1;
+    padding-bottom: 10px;
+}
+
+.nav-wrapper nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+ #hamburger {
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    transition: opacity .3s;
+    padding-right: 5px;
+  }  
+
+  #hamburger:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
+  
+  #hamburger .line{
+    width: 40px;
+    height: 3px;
+    background: var(--main-text-color);
+    margin: 8px auto;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+
+  #hamburger.isactive .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #hamburger.isactive .line:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+  }
+  
+  #hamburger.isactive .line:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+
+
+.nav-wrapper nav #menu-items{
+    padding-bottom: 1rem;
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    height: 16vh;
+    display: none;
+}
+
+nav #menu-items.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+    display: block;
+    animation: fade .5s;
+    background-color: #231f20;
+    opacity: 1;
+    padding-top: 20px;
+    z-index: 5;
+    line-height: 20px;
+    
+}
+
+nav #menu-items.active a{
+    color: #eeece4;
+}
+
+
+.nav-wrapper nav .menu-item{
+    padding: 1.4rem .9rem;
+    text-decoration: none;
+    color: var(--main-text-color);
+    cursor: pointer;
+    transition: .5ms;
+}
+
+.nav-wrapper nav .menu-item:hover{
+    color: darkgray;
+    transition: .5ms;
+}
+
+.nav__logo img {
+    width: 200px;
+    height: 50px;
+}
+
+#nav__user-bereich {
+    display: flex;
+    gap: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    justify-content: center;
+    z-index: 2;
+    width: 100%;
+}
+
+/* main */
+/* hero-section */
+.hero-section {
+    background: center bottom no-repeat url(../images/Meerjungfrau_Genuss_07_CL7_4722.svg);
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -1rem;
+}
+
+.hero-section__hook {
+    position: absolute;
+    width: 375px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    
+    padding: 1rem;
+}
+
+.hero-section__bg {
+    background: no-repeat url(../images/Shape_hero_hook.svg);
+    background-position: bottom 130px left -15px;
+    background-size: 340px;
+    padding: 5rem 3rem;
+}
+
+.hero-section__hook-text{
+   color: var(--main-text-color);
+   line-height: 22.4px;
+}
+
+.hero-section__hook-text h1{
+    text-transform: uppercase;
+    line-height: 40px;
+    width: 100%;
+}
+
+.hero-section__hook-cta {
+    margin-top: 1rem;
+    border: none;
+    background-color: #dad260;
+    border-radius: 5px;
+    padding: .5rem;
+}
+
+/* Section 1 - Beer Range */
+
+.special-selection {
+    background:center center no-repeat url(../images/beer_range_bg.svg);
+    background-size: 10000px 2115px;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.special-selection__beer-text h3 {
+    text-transform: uppercase;
+}
+
+.special-selection__beer {
+    padding-top: 3rem;
+}
+
+.beer-titel, .beer-preis {
+    font-weight: bold;
+}
+
+.beer-size, .beer-pfand {
+    font-size: .7rem;
+}
+
+/* Section 2 - Advertising */
+.ads {
+    height: fit-content;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.ads .advertising-text {
+    font-size: 1rem;
+    padding-top: 1rem;
+    line-height: 1.3rem;
+}
+
+.ads .advertising-text h2{
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
+
+.ads img {
+    width: 100%;
+    height: auto;
+}
+
+.ads__right {
+    margin-top: 2.5rem;
+}
+
+/* Section 3 - Awards */
+.awards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 4rem;
+}
+.awards .awards__left img{
+    width: 326px;
+    height: auto;
+
+}
+
+.awards img {
+    height: 143px;
+    width: 163px;
+}
+
+.awards .awards__mid {
+    flex-direction: row;
+}
+
+/* Footer */
+
+footer {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: center center no-repeat url(../images/footer_bg.svg);
+    background-size: 3350px 1000px;
+    color: #eeece4;
+}
+
+footer h3 {
+    padding-bottom: 8px;
+}
+
+/* Footer Section - Services and Informations */
+.informations, .services {
+    width: 150px;
+    padding-left: 35px;
+}
+
+.services .service, .informations .information {
+    list-style: none;
+    
+}
+
+.services .service a, .informations .information a{
+    color: var(--main-text-color);
+    line-height: 1.4rem;
+    text-decoration: none;
+    color: #eeece4;
+}
+
+/* Footer Section - Social Media */
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 16px;
+}
+
+/* Footer Section - Newsletter */
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter .newsletter__interaction {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.newsletter .newsletter__interaction .newsletter-cta {
+    background-color: #dad260;
+    border-radius: 3px;
+    border: none;
+}
+
+
+/* mobile width: 768px */
+/* navbar */
+@media screen and (min-width: 768px) {
+    /* navbar */
+    nav #menu-items.active {
+        justify-content: space-evenly;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 85%;
+        animation: fade .5s;
+        background-color: #231f20;
+        opacity: 1;
+        padding-top: 20px;
+        z-index: 5;
+        line-height: 20px;
+    }
+
+    nav #menu-items.active a{
+        color: #eeece4;
+    }
+
+    /* hero-section */
+    .hero-section__hook {
+        position: absolute;
+        left: 75%;
+        top: 40%;
+        transform: translate(-75%, -50%);
+        
+        padding: 1rem;
+    }
+
+    /* beer selection */
+    .special-selection {
+        background:center center no-repeat url(../images/beer_range_bg.svg);
+        background-size: 2500px 2115px;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .special-selection__beers {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    /* advertising */
+    .advertising {
+        display: flex;
+        gap: 16px;
+        padding-top: 8px;
+    }
+    .ads__right {
+        margin-top: 0;
+    }
+
+    .awards {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    /* footer-section - services and informations */
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/* mobile width: 1024px */
+/* navbar */
+@media screen and (min-width: 1024px) {
+    
+    /* navbar */
+    .nav-wrapper {
+        flex-direction: row;
+        height: 50px;
+    }
+    .nav-wrapper nav {
+        gap: 200px;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        position: s;
+        padding-top: 15px;
+    }
+
+    .nav__logo img {
+        width: 200px;
+        height: 50px;
+    }
+
+    #nav__user-bereich {
+        gap: 2rem;
+        cursor: pointer;
+        justify-content: space-evenly;
+        z-index: 2;
+        width: fit-content;
+        position: absolute;
+        top: 5px;
+        right: 90px;
+    }
+
+
+/*     #nav__user-bereich {
+        gap: 2rem;
+        cursor: pointer;
+        z-index: 2;
+        width: fit-content;
+        border: 1px solid blue;
+    } */
+
+    #hamburger {
+        display: none;
+    }
+
+    .nav-wrapper nav #menu-items{
+        text-align: left;
+        width: fit-content;
+        height: 100%;
+        align-self: center;
+    }
+    /* hero-section */
+
+    .hero-section__hook {
+        position: absolute;
+        left: 75%;
+        top: 40%;
+        transform: translate(-75%, -50%);
+        padding: 1rem;
+    }
+
+    /* beer selection */
+    .special-selection {
+        background:center center no-repeat url(../images/Rectangle\ 2.svg);
+        background-size: auto auto;
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 8px;
+    }
+
+    .special-selection__beers {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    /* advertising */
+    .advertising {
+        display: flex;
+        gap: 16px;
+        padding-top: 8px;
+    }
+    .ads__right {
+        margin-top: 0;
+    }
+
+    .awards {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .awards__group {
+        display: flex;
+        gap: 16px;
+    }
+
+    /* footer-section - services and informations */
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
