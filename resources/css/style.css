@@ -96,7 +96,7 @@ nav #menu-items.active a{
 }
 
 nav #menu-items.active {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 85%;
@@ -164,7 +164,7 @@ nav #menu-items.active {
   .arrow {
       border: solid black;
       border-width: 0 3px 3px 0;
-      display: inline-block;
+      display: none;
       padding: 3px 3px 3px 3px;
       transform: rotate(45deg);
       margin-left: 5px;
@@ -284,6 +284,7 @@ nav #menu-items.active {
     display: flex;
     flex-direction: column;
     padding: 8px 8px;
+    margin-top: -20px;
 }
 
 .ads .advertising-text {
@@ -337,11 +338,11 @@ nav #menu-items.active {
 /* Footer */
 
 footer {
-    padding: 2rem 0;
+    padding: 32px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 24px;
     background: center center no-repeat url(../images/footer_bg.svg);
     background-size: 3350px 1000px;
     color: #eeece4;
@@ -373,6 +374,10 @@ footer h3 {
     color: #eeece4;
 }
 
+.services h3 {
+    padding-top: 30px;
+}
+
 /* Footer Section - Social Media */
 .socials {
     display: flex;
@@ -394,10 +399,6 @@ footer h3 {
     padding: 3px 0 3px 5px;
 }
 
-.newsletter-cta {
-    margin-top: 3px;
-}
-
 .newsletter h3 {
     padding-bottom: 10px;
 }
@@ -412,6 +413,7 @@ footer h3 {
     background-color: #dad260;
     border-radius: 3px;
     border: none;
+    margin-top: 3px;
 }
 
 
@@ -421,6 +423,7 @@ footer h3 {
     /* navbar */
     nav #menu-items.active {
         display: flex;
+        font-size: 20px;
         justify-content: space-evenly;
         align-items: center;
         width: 85%;
@@ -455,11 +458,13 @@ footer h3 {
 
     #nav__user-bereich .user-icon {
         width: 30px;
-        
+    }
+
+    .arrow {
+        display: none;
     }
 
     /* hero-section */
-
     .hero-section {
         margin-bottom: -5.5px;
     }
@@ -594,6 +599,7 @@ footer h3 {
     .arrow {
         position: absolute;
         top: 15px;
+        display: inline-block;
     }
 
     .shop_subcategory {
@@ -753,4 +759,17 @@ footer h3 {
     .newsletter h3 {
         padding-bottom: 10px;
     }
+}
+
+/* Contact Form */
+.contact-form input {
+    padding: 3px 0 3px 5px;
+}
+
+.contact-form .submit {
+    background-color: #dad260;
+    border-radius: 5px;
+    padding: 3px 5px;
+    font-family: 'inselTitilium', sans-serif;
+    font-weight: 700;
 }
