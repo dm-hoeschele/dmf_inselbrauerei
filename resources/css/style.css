@@ -3,6 +3,20 @@
     --main-text-color: rgb(35, 31, 32);
   }
 
+  /* import of fontface */
+  @font-face {
+      font-family: inselGearedSlap;
+      src: url(../fonts/Archiv/geared-slab/GearedSlab.ttf);
+  }
+  @font-face {
+      font-family: inselTitiliumReg;
+      src: url(../fonts/Archiv/Titillium_Web/TitilliumWeb-Regular.ttf);
+  }
+  @font-face {
+      font-family: inselTitiliumBold;
+      src: url(../fonts/Archiv/Titillium_Web/TitilliumWeb-Bold.ttf);
+  }
+
 /* genereal */
 * {
     padding: 0;
@@ -13,6 +27,7 @@
 body {
     color: var(--main-text-color);
     background-color: #eeece4;
+    font-family: 'inselGearedSlap', sans-serif;
 }
 /* mobile width: 375px */
 /* navbar */
@@ -159,15 +174,18 @@ nav #menu-items.active {
 
 .hero-section__bg {
     background: no-repeat url(../images/Shape_hero_hook.svg);
-    background-position: bottom 60px left -5px;
-    background-size: 305px;
+    background-position: bottom 70px left -5px;
+    background-size: 315px;
     padding: 80px 48px;
 }
 
 .hero-section__hook-text{
    color: var(--main-text-color);
-   line-height: 22.4px;
+   line-height: 20px;
    font-size: 14px;
+}
+.hero-section__hook-text p{
+   font-family: 'inselTitilium', sans-serif;
 }
 
 .hero-section__hook-text h1{
@@ -186,9 +204,11 @@ nav #menu-items.active {
     padding: 10px 5px;
     width: 200px;
     position: absolute;
-    top: 210px;
+    top: 220px;
     left: 80px;
     cursor: pointer;
+    font-family: 'inselTitilium', sans-serif;
+    font-weight: 700;
 }
 
 /* Section 1 - Beer Range */
@@ -214,6 +234,11 @@ nav #menu-items.active {
 
 .beer-size, .beer-pfand {
     font-size: .7rem;
+    font-family: 'inselTitiliumReg', sans-serif;
+}
+
+.beer_infos {
+    font-family: 'inselTitiliumBold', sans-serif;
 }
 
 /* Section 2 - Advertising */
@@ -229,11 +254,15 @@ nav #menu-items.active {
     font-size: 16px;
     padding-top: 16px;
     line-height: 21px;
+    font-family: 'inselTitiliumReg';
 }
 
 .ads .advertising-text h2{
     font-size: 21px;
     line-height: 24px;
+    padding-bottom: 8px;
+    font-family: 'inselGearedSlap', sans-serif;
+    text-transform: uppercase;
 }
 
 .ads img {
@@ -287,6 +316,10 @@ footer h3 {
 }
 
 /* Footer Section - Services and Informations */
+.service, .information {
+    font-family: 'inselTitiliumReg', sans-serif;
+}
+
 .informations, .services {
     width: 150px;
     padding-left: 35px;
@@ -318,6 +351,10 @@ footer h3 {
     align-items: center;
 }
 
+.newsletter h3 {
+    padding-bottom: 25px;
+}
+
 .newsletter .newsletter__interaction {
     display: flex;
     flex-direction: column;
@@ -336,7 +373,6 @@ footer h3 {
 @media screen and (min-width: 768px) {
     /* navbar */
     nav #menu-items.active {
-        border: 1px solid red;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -408,6 +444,10 @@ footer h3 {
     .awards {
         flex-direction: row;
         justify-content: space-evenly;
+    }
+
+    .awards__group {
+        gap: 16px;
     }
 
     /* footer-section - services and informations */
@@ -483,7 +523,11 @@ footer h3 {
     }
     /* hero-section */
     .hero-section {
-        height: 60vh;
+        height: 70vh;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
     }
 
     .hero-section__hook {
@@ -494,9 +538,18 @@ footer h3 {
         padding: 16px;
     }
 
+    .hero-section__bg {
+        background-position: center 70px left -15px;
+        background-size: 330px;
+    }
+
     /* beer selection */
     .special-selection {
         text-transform: uppercase;
+    }
+
+    .special-selection .special-selection__header {
+        font-size: 28px;
     }
 
     .special-selection__beers {
@@ -531,5 +584,53 @@ footer h3 {
     footer {
         flex-direction: row;
         justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width: 1115px) {
+    .nav__logo img {
+        position: absolute;
+        top: -27px;
+        left: 650px;
+        width: 220px;
+    }
+
+    .hero-section {
+        background: center center no-repeat url(../images/Meerjungfrau_Genuss_07_CL7_4722.svg);
+        background-size: cover;
+        height: 80vh;
+    }
+
+    .hero-section__hook {
+        width: 400px;
+    }
+
+    .hero-section__bg {
+        background-position: bottom 45px left -15px;
+        background-size: 350px;
+    }
+
+    .awards {
+        justify-content: space-evenly;
+        padding-bottom: 16px;
+    }
+
+    .awards__group {
+        display: flex;
+        flex-direction: row;
+        margin-left: -210px;
+        gap: 32px;
+    }
+
+    .logo_socials .company_logo {
+        width: 180px;
+    }
+
+    .logo_socials .socials{
+        width: 200px;
+    }
+
+    .newsletter h3 {
+        padding-bottom: 25px;
     }
 }
