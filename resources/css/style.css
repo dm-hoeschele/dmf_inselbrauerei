@@ -18,8 +18,8 @@ body {
 /* navbar */
 .nav-wrapper {
     width: 100%;
-    height: 8rem;
-    margin-bottom: 1rem;
+    height: 140px;
+    margin-bottom: 32px;
     background-color: #fff;
     z-index: 1;
     padding-bottom: 10px;
@@ -33,6 +33,51 @@ body {
     width: 90%;
     height: 100%;
     margin: 0 auto;
+}
+
+nav #menu-items.active a{
+    color: #eeece4;
+}
+
+
+.nav-wrapper nav #menu-items{
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    height: 16vh;
+    display: none;
+}
+
+.nav-wrapper nav .menu-item{
+    padding: 22px 14px;
+    text-decoration: none;
+    color: var(--main-text-color);
+    cursor: pointer;
+    transition: .5ms;
+}
+
+.nav-wrapper nav .menu-item:hover{
+    color: darkgray;
+    transition: .5ms;
+}
+
+.nav__logo img {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 35px;
+    left: 75px;
+}
+
+#nav__user-bereich {
+    display: flex;
+    gap: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    justify-content: center;
+    z-index: 2;
+    width: 100%;
 }
 
  #hamburger {
@@ -73,110 +118,77 @@ body {
     transform: translateY(-11px) rotate(-45deg);
   }
 
-
-.nav-wrapper nav #menu-items{
-    padding-bottom: 1rem;
-    list-style: none;
-    text-align: left;
-    width: 100%;
-    height: 16vh;
-    display: none;
-}
-
 nav #menu-items.active {
     position: fixed;
     top: 0;
     left: 0;
     width: 85%;
+    height: 22vh;
     display: block;
     animation: fade .5s;
     background-color: #231f20;
     opacity: 1;
-    padding-top: 20px;
+    padding: 10px;
     z-index: 5;
-    line-height: 20px;
+    line-height: 25px;
     
 }
 
-nav #menu-items.active a{
-    color: #eeece4;
-}
 
-
-.nav-wrapper nav .menu-item{
-    padding: 1.4rem .9rem;
-    text-decoration: none;
-    color: var(--main-text-color);
-    cursor: pointer;
-    transition: .5ms;
-}
-
-.nav-wrapper nav .menu-item:hover{
-    color: darkgray;
-    transition: .5ms;
-}
-
-.nav__logo img {
-    width: 200px;
-    height: 50px;
-}
-
-#nav__user-bereich {
-    display: flex;
-    gap: 2rem;
-    cursor: pointer;
-    position: absolute;
-    top: 100px;
-    justify-content: center;
-    z-index: 2;
-    width: 100%;
-}
 
 /* main */
 /* hero-section */
 .hero-section {
     background: center bottom no-repeat url(../images/Meerjungfrau_Genuss_07_CL7_4722.svg);
     background-size: cover;
-    height: 40vh;
+    height: 45vh;
     width: 100%;
     margin: 0 auto;
-    margin-top: -1rem;
+    margin-top: -20px;
+    margin-bottom: 8px;
 }
 
 .hero-section__hook {
     position: absolute;
     width: 375px;
     left: 50%;
-    top: 40%;
+    top: 45%;
     transform: translate(-50%, -50%);
-    
-    padding: 1rem;
+    padding: 16px;
 }
 
 .hero-section__bg {
     background: no-repeat url(../images/Shape_hero_hook.svg);
-    background-position: bottom 130px left -15px;
-    background-size: 340px;
-    padding: 5rem 3rem;
+    background-position: bottom 60px left -5px;
+    background-size: 305px;
+    padding: 80px 48px;
 }
 
 .hero-section__hook-text{
    color: var(--main-text-color);
    line-height: 22.4px;
+   font-size: 14px;
 }
 
 .hero-section__hook-text h1{
     text-transform: uppercase;
+    font-size: 25px;
     line-height: 40px;
     width: 100%;
 }
 
+
 .hero-section__hook-cta {
-    margin-top: 1rem;
+    margin-top: 16px;
     border: none;
     background-color: #dad260;
     border-radius: 5px;
-    padding: .5rem;
+    padding: 10px 5px;
+    width: 200px;
+    position: absolute;
+    top: 210px;
+    left: 80px;
+    cursor: pointer;
 }
 
 /* Section 1 - Beer Range */
@@ -185,7 +197,7 @@ nav #menu-items.active a{
     background:center center no-repeat url(../images/beer_range_bg.svg);
     background-size: 10000px 2115px;
     text-align: center;
-    padding: 2rem 0;
+    padding: 32px 0;
 }
 
 .special-selection__beer-text h3 {
@@ -210,18 +222,18 @@ nav #menu-items.active a{
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 1rem;
+    padding: 8px 8px;
 }
 
 .ads .advertising-text {
-    font-size: 1rem;
-    padding-top: 1rem;
-    line-height: 1.3rem;
+    font-size: 16px;
+    padding-top: 16px;
+    line-height: 21px;
 }
 
 .ads .advertising-text h2{
-    font-size: 1.3rem;
-    line-height: 1.5rem;
+    font-size: 21px;
+    line-height: 24px;
 }
 
 .ads img {
@@ -230,7 +242,7 @@ nav #menu-items.active a{
 }
 
 .ads__right {
-    margin-top: 2.5rem;
+    margin-top: 40px;
 }
 
 /* Section 3 - Awards */
@@ -324,12 +336,12 @@ footer h3 {
 @media screen and (min-width: 768px) {
     /* navbar */
     nav #menu-items.active {
+        border: 1px solid red;
+        display: flex;
         justify-content: space-evenly;
         align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
         width: 85%;
+        height: 14vh;
         animation: fade .5s;
         background-color: #231f20;
         opacity: 1;
@@ -342,14 +354,29 @@ footer h3 {
         color: #eeece4;
     }
 
+    .nav__logo img {
+        width: 280px;
+        height: 100px;
+        position: absolute;
+        top: 15px;
+        left: 230px;
+    }
+
+    #nav__user-bereich img{
+        width: 35px;
+    }
+
+    #nav__user-bereich .user-icon {
+        width: 30px;
+    }
+
     /* hero-section */
     .hero-section__hook {
         position: absolute;
         left: 75%;
-        top: 40%;
+        top: 35%;
         transform: translate(-75%, -50%);
-        
-        padding: 1rem;
+        padding: 16px;
     }
 
     /* beer selection */
@@ -357,7 +384,8 @@ footer h3 {
         background:center center no-repeat url(../images/beer_range_bg.svg);
         background-size: 2500px 2115px;
         text-align: center;
-        padding: 2rem 0;
+        padding: 32px 0;
+        margin-top: 16px;
     }
 
     .special-selection__beers {
@@ -407,13 +435,23 @@ footer h3 {
         padding-top: 15px;
     }
 
+    .nav-wrapper nav #menu-items{
+        list-style: none;
+        text-align: left;
+        width: 100%;
+        height: 16vh;
+        display: flex;
+    }
+
     .nav__logo img {
+        position: absolute;
+        top: -27px;
+        left: 550px;
         width: 200px;
-        height: 50px;
     }
 
     #nav__user-bereich {
-        gap: 2rem;
+        gap: 32px;
         cursor: pointer;
         justify-content: space-evenly;
         z-index: 2;
@@ -421,16 +459,17 @@ footer h3 {
         position: absolute;
         top: 5px;
         right: 90px;
+        padding-top: 8px;
+        
     }
 
+    #nav__user-bereich img{
+        width: 25px;
+    }
 
-/*     #nav__user-bereich {
-        gap: 2rem;
-        cursor: pointer;
-        z-index: 2;
-        width: fit-content;
-        border: 1px solid blue;
-    } */
+    #nav__user-bereich .user-icon {
+        width: 20px;
+    }
 
     #hamburger {
         display: none;
@@ -443,22 +482,21 @@ footer h3 {
         align-self: center;
     }
     /* hero-section */
+    .hero-section {
+        height: 60vh;
+    }
 
     .hero-section__hook {
         position: absolute;
         left: 75%;
         top: 40%;
         transform: translate(-75%, -50%);
-        padding: 1rem;
+        padding: 16px;
     }
 
     /* beer selection */
     .special-selection {
-        background:center center no-repeat url(../images/Rectangle\ 2.svg);
-        background-size: auto auto;
-        text-align: center;
-        padding: 2rem 0;
-        margin-top: 8px;
+        text-transform: uppercase;
     }
 
     .special-selection__beers {
@@ -485,6 +523,7 @@ footer h3 {
 
     .awards__group {
         display: flex;
+        flex-direction: column;
         gap: 16px;
     }
 
