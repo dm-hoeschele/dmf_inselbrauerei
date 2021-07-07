@@ -102,7 +102,7 @@ nav #menu-items.active {
     width: 85%;
     height: 22vh;
     display: block;
-    animation: fade .5s;
+    animation: ease .5s;
     background-color: #231f20;
     opacity: 1;
     padding: 10px;
@@ -182,7 +182,7 @@ nav #menu-items.active {
     width: 100%;
     margin: 0 auto;
     margin-top: -31px;
-    margin-bottom: 8px;
+    margin-bottom: -15px;
 }
 
 .hero-section__hook {
@@ -240,7 +240,17 @@ nav #menu-items.active {
     background-size: 10000px 2115px;
     text-align: center;
     padding: 32px 0;
+    margin-top: -40px;
+    height: fit-content;
 }
+
+.special-selection__header h3{
+    font-size: 25px;
+    height: 40px;
+    padding-top: 30px;
+
+}
+
 
 .special-selection__beer-text h3 {
     text-transform: uppercase;
@@ -261,6 +271,10 @@ nav #menu-items.active {
 
 .beer_infos {
     font-family: 'inselTitiliumBold', sans-serif;
+}
+
+.last {
+    padding-bottom: 20px;
 }
 
 /* Section 2 - Advertising */
@@ -373,8 +387,19 @@ footer h3 {
     align-items: center;
 }
 
+.newsletter input {
+    background-color: #231f20;
+    border: 1px solid #ffff;
+    border-radius: 3px;
+    padding: 3px 0 3px 5px;
+}
+
+.newsletter-cta {
+    margin-top: 3px;
+}
+
 .newsletter h3 {
-    padding-bottom: 25px;
+    padding-bottom: 10px;
 }
 
 .newsletter .newsletter__interaction {
@@ -453,7 +478,7 @@ footer h3 {
         background-size: 2500px 2115px;
         text-align: center;
         padding: 32px 0;
-        margin-top: 1px;
+        margin-top: -50px;
     }
 
     .special-selection .special-selection__header {
@@ -573,8 +598,8 @@ footer h3 {
 
     .shop_subcategory {
         color: var(--main-text-color);
-        text-decoration: none;
-        transition: .5s ease;
+        text-decoration: none; 
+        transition: .5ms ease;
     }
     
     .shop_subcategory:hover {
@@ -660,6 +685,7 @@ footer h3 {
     #shop_subcategories.active {
         position: absolute;
         left: 75px;
+        top: 50px;
     }
 
     .arrow {
@@ -668,7 +694,6 @@ footer h3 {
     }
 
     .hero-section {
-        background: center center no-repeat cover url(../images/Meerjungfrau_Genuss_07_CL7_4722.svg);
         height: 80vh;
         margin-bottom: 5px;
     }
@@ -678,15 +703,26 @@ footer h3 {
     }
 
     .hero-section__bg {
-        background-position: bottom 45px left -15px;
-        background-size: 350px;
+        background-position: bottom 50px left -15px;
+        background-size: 400px;
+        width: fit-content;
+        position: absolute;
+        left: 75%;
+        top: 110%;
+        transform: translate(-75%, -30%);
+    }
+
+    .hero-section__hook-cta {
+        position: absolute;
+        top: 200px;
     }
 
     .special-selection {
-        background:center center no-repeat url(../images/beer_range_bg.svg);
         background-size: 1550px 2200px;
+        background-position: top 100px;
         text-align: center;
         padding: 32px 0;
+        margin-top: -2px;
     }
 
     .advertising {
@@ -712,17 +748,6 @@ footer h3 {
 
     .logo_socials .socials{
         width: 200px;
-    }
-
-    .newsletter input {
-        background-color: #231f20;
-        border: 1px solid #ffff;
-        border-radius: 3px;
-        padding: 3px 0 3px 5px;
-    }
-
-    .newsletter-cta {
-        margin-top: 3px;
     }
 
     .newsletter h3 {
