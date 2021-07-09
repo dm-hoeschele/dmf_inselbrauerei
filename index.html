@@ -18,7 +18,7 @@
           </div>
         <nav>
             <ul id="menu-items">
-                <li><a href="#" class="menu-item" id="menu_shop">Shop</a></li>
+                <li><a href="#" class="menu-item" id="menu_shop">Shop <i class="arrow"></i></a></li>
                 <li><a href="#" class="menu-item">Brauphilosopie</a></li>
                 <li><a href="#" class="menu-item">Insel & Natur</a></li>
                 <li><a href="#" class="menu-item">Brauerei</a></li>
@@ -28,10 +28,18 @@
                 <a href="#"><img src="./resources/images/inselbrauerei_logo.svg" alt="Company Logo"></a>
             </div>
             <div id="nav__user-bereich">
-                <a href="#"><img src="./resources/images/user_icon.svg" alt="User-Icon"></a>
-                <a href="#"><img src="./resources/images/cart_icon.svg" alt="Shopping Cart"></a>
+                <a href="#"><img class="user-icon" src="./resources/images/user_icon.svg" alt="User-Icon"></a>
+                <a href="#"><img class="cart-icon" src="./resources/images/cart_icon.svg" alt="Shopping Cart"></a>
             </div>
         </nav>
+        <div>
+            <ul id="shop_subcategories">
+                <li><a class="shop_subcategory" href="#">Seltene Biere</a></li>
+                <li><a class="shop_subcategory" href="#">Pick & Match</a></li>
+                <li><a class="shop_subcategory" href="#">Flaschenpost</a></li>
+                <li><a class="shop_subcategory" href="#">Gläser</a></li>
+            </ul>
+        </div>
     </div>
     <main>
         <!-- hero-section -->
@@ -42,15 +50,17 @@
                         <h1>Lorem ipsum</h1>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam nesciunt placeat et ipsa dignissimos veniam quod veritatis id voluptatum quis.</p>
                     </div>
-                    <button class="hero-section__hook-cta">Jetzt <br>entdecken</button>
+                    <button class="hero-section__hook-cta">Jetzt entdecken</button>
                 </div>
             </div>
         </div>
         <!-- beer range -->
         <section class="special-selection">
-            <h3>
-                Unsere besonderen Biere
-            </h3>
+            <div class="special-selection__header">
+                <h3>
+                    Unsere besonderen Biere
+                </h3>
+            </div>
             <div class="special-selection__beers">
                 <div class="special-selection__beer">
                     <div class="special-selection__beer-image">
@@ -60,9 +70,11 @@
                         <h3 class="beer-titel">Insel Pilsner</h3>
                         <p class="beer-flavour">Wet Hopped</p>
                         <br>
-                        <p class="beer-preis">14,94 €</p>
-                        <p class="beer-size">7,55 € / Liter</p>
-                        <p class="beer-pfand">zzgl. Pfand: 0,48 €</p>
+                        <div class="beer_infos">
+                            <p class="beer-preis">14,94 €</p>
+                            <p class="beer-size">7,55 € / Liter</p>
+                            <p class="beer-pfand">zzgl. Pfand: 0,48 €</p>
+                        </div>
                     </div>
                 </div>
                 <div class="special-selection__beer">
@@ -73,9 +85,11 @@
                         <h3 class="beer-titel">Insel Saison</h3>
                         <p class="beer-flavour">Wet Hopped</p>
                         <br>
-                        <p class="beer-preis">14,94 €</p>
-                        <p class="beer-size">7,55 € / Liter</p>
-                        <p class="beer-pfand">zzgl. Pfand: 0,48 €</p>
+                        <div class="beer_infos">
+                            <p class="beer-preis">14,94 €</p>
+                            <p class="beer-size">7,55 € / Liter</p>
+                            <p class="beer-pfand">zzgl. Pfand: 0,48 €</p>
+                        </div>
                     </div>
                 </div>
                 <div class="special-selection__beer">
@@ -86,9 +100,11 @@
                         <h3 class="beer-titel">Insel Kap</h3>
                         <p class="beer-flavour">Wet Hopped</p>
                         <br>
-                        <p class="beer-preis">14,94 €</p>
-                        <p class="beer-size">7,55 € / Liter</p>
-                        <p class="beer-pfand">zzgl. Pfand: 0,48 €</p>
+                        <div class="beer_infos">
+                            <p class="beer-preis">14,94 €</p>
+                            <p class="beer-size">7,55 € / Liter</p>
+                            <p class="beer-pfand">zzgl. Pfand: 0,48 €</p>
+                        </div>
                     </div>
                 </div>
                 <div class="special-selection__beer">
@@ -99,9 +115,11 @@
                         <h3 class="beer-titel">East Coast</h3>
                         <p class="beer-flavour">Wet Hopped</p>
                         <br>
-                        <p class="beer-preis">14,94 €</p>
-                        <p class="beer-size">7,55 € / Liter</p>
-                        <p class="beer-pfand">zzgl. Pfand: 0,48 €</p>
+                        <div class="beer_infos">
+                            <p class="beer-preis">14,94 €</p>
+                            <p class="beer-size">7,55 € / Liter</p>
+                            <p class="beer-pfand">zzgl. Pfand: 0,48 €</p>
+                        </div>
                     </div>
                 </div>
                 <div class="special-selection__beer">
@@ -112,9 +130,11 @@
                         <h3 class="beer-titel">Insel Kreide</h3>
                         <p class="beer-flavour">Wet Hopped</p>
                         <br>
-                        <p class="beer-preis">14,94 €</p>
-                        <p class="beer-size">7,55 € / Liter</p>
-                        <p class="beer-pfand">zzgl. Pfand: 0,48 €</p>
+                        <div class="beer_infos">
+                            <p class="beer-preis">14,94 €</p>
+                            <p class="beer-size">7,55 € / Liter</p>
+                            <p class="beer-pfand last">zzgl. Pfand: 0,48 €</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -170,6 +190,15 @@
             </div>
         </section>
     </main>
+    <div class="contact-form">
+        <form action="https://demo-inselbrauerei.dmc/resources/php/send.php" method="POST" class="form-inline">
+            <label for="">Bitte E-Mail eingeben:</label>
+            <div class="interactive-components">
+                <input type="text" name="senders_email" placeholder="E-Mail" class="form-control">
+                <input type="submit" value="Senden" class="submit btn">
+            </div>
+        </form>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="services">
@@ -193,7 +222,7 @@
             </ul>
         </div>
         <div class="logo_socials">
-            <img src="./resources/images/Group 908.svg" alt="Company Logo">
+            <div class="company_logo"><img src="./resources/images/Group 908.svg" alt="Company Logo"></div>
             <div class="socials">
                 <a href="#"><img src="./resources/images/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="./resources/images/twitter.svg" alt="Twitter"></a>

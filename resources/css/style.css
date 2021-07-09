@@ -3,6 +3,20 @@
     --main-text-color: rgb(35, 31, 32);
   }
 
+  /* import of fontface */
+  @font-face {
+      font-family: inselGearedSlap;
+      src: url(../fonts/Archiv/geared-slab/GearedSlab.ttf);
+  }
+  @font-face {
+      font-family: inselTitiliumReg;
+      src: url(../fonts/Archiv/Titillium_Web/TitilliumWeb-Regular.ttf);
+  }
+  @font-face {
+      font-family: inselTitiliumBold;
+      src: url(../fonts/Archiv/Titillium_Web/TitilliumWeb-Bold.ttf);
+  }
+
 /* genereal */
 * {
     padding: 0;
@@ -13,13 +27,14 @@
 body {
     color: var(--main-text-color);
     background-color: #eeece4;
+    font-family: 'inselGearedSlap', sans-serif;
 }
 /* mobile width: 375px */
 /* navbar */
 .nav-wrapper {
     width: 100%;
-    height: 8rem;
-    margin-bottom: 1rem;
+    height: 140px;
+    margin-bottom: 32px;
     background-color: #fff;
     z-index: 1;
     padding-bottom: 10px;
@@ -33,6 +48,79 @@ body {
     width: 90%;
     height: 100%;
     margin: 0 auto;
+}
+
+nav #menu-items.active a{
+    color: #eeece4;
+}
+
+
+.nav-wrapper nav #menu-items{
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    height: 16vh;
+    display: none;
+}
+
+.nav-wrapper nav .menu-item{
+    padding: 22px 14px;
+    text-decoration: none;
+    color: var(--main-text-color);
+    cursor: pointer;
+    transition: .5ms;
+}
+
+.nav-wrapper nav .menu-item:hover{
+    color: darkgray;
+    transition: .5ms;
+}
+
+.nav__logo img {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 35px;
+    left: 75px;
+}
+
+#nav__user-bereich {
+    display: flex;
+    gap: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    justify-content: center;
+    z-index: 2;
+    width: 100%;
+}
+
+nav #menu-items.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 22vh;
+    display: block;
+    animation: ease .5s;
+    background-color: #231f20;
+    opacity: 1;
+    padding: 10px;
+    z-index: 5;
+    line-height: 25px;   
+}
+
+/* shop - subcategories */
+#shop_subcategories {
+    list-style-type: none;
+    position: absolute;
+    top: 52px;
+    left: 70px;
+    background-color: #ffffff;
+    padding: 10px 65px 10px 20px;
+    line-height: 30px;
+    font-size: 14px;
+    display: none;
 }
 
  #hamburger {
@@ -73,110 +161,76 @@ body {
     transform: translateY(-11px) rotate(-45deg);
   }
 
-
-.nav-wrapper nav #menu-items{
-    padding-bottom: 1rem;
-    list-style: none;
-    text-align: left;
-    width: 100%;
-    height: 16vh;
-    display: none;
-}
-
-nav #menu-items.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 85%;
-    display: block;
-    animation: fade .5s;
-    background-color: #231f20;
-    opacity: 1;
-    padding-top: 20px;
-    z-index: 5;
-    line-height: 20px;
-    
-}
-
-nav #menu-items.active a{
-    color: #eeece4;
-}
-
-
-.nav-wrapper nav .menu-item{
-    padding: 1.4rem .9rem;
-    text-decoration: none;
-    color: var(--main-text-color);
-    cursor: pointer;
-    transition: .5ms;
-}
-
-.nav-wrapper nav .menu-item:hover{
-    color: darkgray;
-    transition: .5ms;
-}
-
-.nav__logo img {
-    width: 200px;
-    height: 50px;
-}
-
-#nav__user-bereich {
-    display: flex;
-    gap: 2rem;
-    cursor: pointer;
-    position: absolute;
-    top: 100px;
-    justify-content: center;
-    z-index: 2;
-    width: 100%;
-}
+  .arrow {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: none;
+      padding: 3px 3px 3px 3px;
+      transform: rotate(45deg);
+      margin-left: 5px;
+      position: absolute;
+      top: 33px;
+      
+  }
 
 /* main */
 /* hero-section */
 .hero-section {
     background: center bottom no-repeat url(../images/Meerjungfrau_Genuss_07_CL7_4722.svg);
     background-size: cover;
-    height: 40vh;
+    height: 45vh;
     width: 100%;
     margin: 0 auto;
-    margin-top: -1rem;
+    margin-top: -31px;
+    margin-bottom: -15px;
 }
 
 .hero-section__hook {
     position: absolute;
     width: 375px;
     left: 50%;
-    top: 40%;
+    top: 45%;
     transform: translate(-50%, -50%);
-    
-    padding: 1rem;
+    padding: 16px;
 }
 
 .hero-section__bg {
     background: no-repeat url(../images/Shape_hero_hook.svg);
-    background-position: bottom 130px left -15px;
-    background-size: 340px;
-    padding: 5rem 3rem;
+    background-position: bottom 70px left -5px;
+    background-size: 315px;
+    padding: 80px 48px;
 }
 
 .hero-section__hook-text{
    color: var(--main-text-color);
-   line-height: 22.4px;
+   line-height: 20px;
+   font-size: 14px;
+}
+.hero-section__hook-text p{
+   font-family: 'inselTitilium', sans-serif;
 }
 
 .hero-section__hook-text h1{
     text-transform: uppercase;
+    font-size: 25px;
     line-height: 40px;
     width: 100%;
 }
 
+
 .hero-section__hook-cta {
-    margin-top: 1rem;
+    margin-top: 16px;
     border: none;
     background-color: #dad260;
     border-radius: 5px;
-    padding: .5rem;
+    padding: 10px 5px;
+    width: 200px;
+    position: absolute;
+    top: 220px;
+    left: 80px;
+    cursor: pointer;
+    font-family: 'inselTitilium', sans-serif;
+    font-weight: 700;
 }
 
 /* Section 1 - Beer Range */
@@ -185,8 +239,18 @@ nav #menu-items.active a{
     background:center center no-repeat url(../images/beer_range_bg.svg);
     background-size: 10000px 2115px;
     text-align: center;
-    padding: 2rem 0;
+    padding: 32px 0;
+    margin-top: -40px;
+    height: fit-content;
 }
+
+.special-selection__header h3{
+    font-size: 25px;
+    height: 40px;
+    padding-top: 30px;
+
+}
+
 
 .special-selection__beer-text h3 {
     text-transform: uppercase;
@@ -202,6 +266,15 @@ nav #menu-items.active a{
 
 .beer-size, .beer-pfand {
     font-size: .7rem;
+    font-family: 'inselTitiliumReg', sans-serif;
+}
+
+.beer_infos {
+    font-family: 'inselTitiliumBold', sans-serif;
+}
+
+.last {
+    padding-bottom: 20px;
 }
 
 /* Section 2 - Advertising */
@@ -210,18 +283,23 @@ nav #menu-items.active a{
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 1rem;
+    padding: 8px 8px;
+    margin-top: -20px;
 }
 
 .ads .advertising-text {
-    font-size: 1rem;
-    padding-top: 1rem;
-    line-height: 1.3rem;
+    font-size: 16px;
+    padding-top: 16px;
+    line-height: 21px;
+    font-family: 'inselTitiliumReg';
 }
 
 .ads .advertising-text h2{
-    font-size: 1.3rem;
-    line-height: 1.5rem;
+    font-size: 21px;
+    line-height: 24px;
+    padding-bottom: 8px;
+    font-family: 'inselGearedSlap', sans-serif;
+    text-transform: uppercase;
 }
 
 .ads img {
@@ -230,7 +308,7 @@ nav #menu-items.active a{
 }
 
 .ads__right {
-    margin-top: 2.5rem;
+    margin-top: 40px;
 }
 
 /* Section 3 - Awards */
@@ -260,11 +338,11 @@ nav #menu-items.active a{
 /* Footer */
 
 footer {
-    padding: 2rem 0;
+    padding: 32px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 24px;
     background: center center no-repeat url(../images/footer_bg.svg);
     background-size: 3350px 1000px;
     color: #eeece4;
@@ -275,6 +353,10 @@ footer h3 {
 }
 
 /* Footer Section - Services and Informations */
+.service, .information {
+    font-family: 'inselTitiliumReg', sans-serif;
+}
+
 .informations, .services {
     width: 150px;
     padding-left: 35px;
@@ -292,6 +374,10 @@ footer h3 {
     color: #eeece4;
 }
 
+.services h3 {
+    padding-top: 30px;
+}
+
 /* Footer Section - Social Media */
 .socials {
     display: flex;
@@ -306,6 +392,17 @@ footer h3 {
     align-items: center;
 }
 
+.newsletter input {
+    background-color: #231f20;
+    border: 1px solid #ffff;
+    border-radius: 3px;
+    padding: 3px 0 3px 5px;
+}
+
+.newsletter h3 {
+    padding-bottom: 10px;
+}
+
 .newsletter .newsletter__interaction {
     display: flex;
     flex-direction: column;
@@ -316,6 +413,7 @@ footer h3 {
     background-color: #dad260;
     border-radius: 3px;
     border: none;
+    margin-top: 3px;
 }
 
 
@@ -324,12 +422,12 @@ footer h3 {
 @media screen and (min-width: 768px) {
     /* navbar */
     nav #menu-items.active {
+        display: flex;
+        font-size: 20px;
         justify-content: space-evenly;
         align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
         width: 85%;
+        height: 14vh;
         animation: fade .5s;
         background-color: #231f20;
         opacity: 1;
@@ -342,14 +440,41 @@ footer h3 {
         color: #eeece4;
     }
 
+    .nav__logo img {
+        width: 280px;
+        height: 100px;
+        position: absolute;
+        top: 15px;
+        left: 230px;
+    }
+
+    .nav-wrapper {
+        height: 150px;
+    }
+
+    #nav__user-bereich img{
+        width: 35px;
+    }
+
+    #nav__user-bereich .user-icon {
+        width: 30px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
     /* hero-section */
+    .hero-section {
+        margin-bottom: -5.5px;
+    }
+
     .hero-section__hook {
         position: absolute;
         left: 75%;
-        top: 40%;
+        top: 35%;
         transform: translate(-75%, -50%);
-        
-        padding: 1rem;
+        padding: 16px;
     }
 
     /* beer selection */
@@ -357,7 +482,12 @@ footer h3 {
         background:center center no-repeat url(../images/beer_range_bg.svg);
         background-size: 2500px 2115px;
         text-align: center;
-        padding: 2rem 0;
+        padding: 32px 0;
+        margin-top: -50px;
+    }
+
+    .special-selection .special-selection__header {
+        font-size: 22px;
     }
 
     .special-selection__beers {
@@ -371,7 +501,6 @@ footer h3 {
     .advertising {
         display: flex;
         gap: 16px;
-        padding-top: 8px;
     }
     .ads__right {
         margin-top: 0;
@@ -380,6 +509,11 @@ footer h3 {
     .awards {
         flex-direction: row;
         justify-content: space-evenly;
+        padding-bottom: 16px;
+    }
+
+    .awards__group {
+        gap: 16px;
     }
 
     /* footer-section - services and informations */
@@ -407,13 +541,24 @@ footer h3 {
         padding-top: 15px;
     }
 
+    .nav-wrapper nav #menu-items{
+        list-style: none;
+        text-align: left;
+        width: 100%;
+        height: 16vh;
+        display: flex;
+        gap: 10px;
+    }
+
     .nav__logo img {
+        position: absolute;
+        top: -27px;
+        left: 550px;
         width: 200px;
-        height: 50px;
     }
 
     #nav__user-bereich {
-        gap: 2rem;
+        gap: 32px;
         cursor: pointer;
         justify-content: space-evenly;
         z-index: 2;
@@ -421,16 +566,17 @@ footer h3 {
         position: absolute;
         top: 5px;
         right: 90px;
+        padding-top: 8px;
+        
     }
 
+    #nav__user-bereich img{
+        width: 25px;
+    }
 
-/*     #nav__user-bereich {
-        gap: 2rem;
-        cursor: pointer;
-        z-index: 2;
-        width: fit-content;
-        border: 1px solid blue;
-    } */
+    #nav__user-bereich .user-icon {
+        width: 20px;
+    }
 
     #hamburger {
         display: none;
@@ -442,23 +588,61 @@ footer h3 {
         height: 100%;
         align-self: center;
     }
+
+    /* shop-subcategories */
+    #shop_subcategories.active {
+        display: block;
+        position: absolute;
+        left: 50px;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 15px;
+        display: inline-block;
+    }
+
+    .shop_subcategory {
+        color: var(--main-text-color);
+        text-decoration: none; 
+        transition: .5ms ease;
+    }
+    
+    .shop_subcategory:hover {
+        color: darkgray;
+        transition: .5ms;
+    }
+
     /* hero-section */
+    .hero-section {
+        height: 70vh;
+        margin-bottom: -10px;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
+    }
 
     .hero-section__hook {
         position: absolute;
         left: 75%;
         top: 40%;
         transform: translate(-75%, -50%);
-        padding: 1rem;
+        padding: 16px;
+    }
+
+    .hero-section__bg {
+        background-position: center 70px left -15px;
+        background-size: 330px;
     }
 
     /* beer selection */
     .special-selection {
-        background:center center no-repeat url(../images/Rectangle\ 2.svg);
-        background-size: auto auto;
-        text-align: center;
-        padding: 2rem 0;
-        margin-top: 8px;
+        text-transform: uppercase;
+    }
+
+    .special-selection .special-selection__header {
+        font-size: 28px;
     }
 
     .special-selection__beers {
@@ -472,7 +656,7 @@ footer h3 {
     .advertising {
         display: flex;
         gap: 16px;
-        padding-top: 8px;
+        padding: 20px 10px;
     }
     .ads__right {
         margin-top: 0;
@@ -485,6 +669,7 @@ footer h3 {
 
     .awards__group {
         display: flex;
+        flex-direction: column;
         gap: 16px;
     }
 
@@ -493,4 +678,98 @@ footer h3 {
         flex-direction: row;
         justify-content: space-evenly;
     }
+}
+
+@media screen and (min-width: 1115px) {
+    .nav__logo img {
+        position: absolute;
+        top: -27px;
+        left: 650px;
+        width: 220px;
+    }
+
+    #shop_subcategories.active {
+        position: absolute;
+        left: 75px;
+        top: 50px;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 17px;
+    }
+
+    .hero-section {
+        height: 80vh;
+        margin-bottom: 5px;
+    }
+
+    .hero-section__hook {
+        width: 400px;
+    }
+
+    .hero-section__bg {
+        background-position: bottom 50px left -15px;
+        background-size: 400px;
+        width: fit-content;
+        position: absolute;
+        left: 75%;
+        top: 110%;
+        transform: translate(-75%, -30%);
+    }
+
+    .hero-section__hook-cta {
+        position: absolute;
+        top: 200px;
+    }
+
+    .special-selection {
+        background-size: 1550px 2200px;
+        background-position: top 100px;
+        text-align: center;
+        padding: 32px 0;
+        margin-top: -2px;
+    }
+
+    .advertising {
+        padding: 120px 280px;
+    }
+
+    .awards {
+        justify-content: space-evenly;
+        padding-bottom: 16px;
+    }
+
+    .awards__group {
+        display: flex;
+        flex-direction: row;
+        margin-left: -210px;
+        gap: 32px;
+    }
+
+    .logo_socials .company_logo {
+        width: 200px;
+        text-align: center;
+    }
+
+    .logo_socials .socials{
+        width: 200px;
+    }
+
+    .newsletter h3 {
+        padding-bottom: 10px;
+    }
+}
+
+/* Contact Form */
+.contact-form input {
+    padding: 3px 0 3px 5px;
+}
+
+.contact-form .submit {
+    background-color: #dad260;
+    border-radius: 5px;
+    padding: 3px 5px;
+    font-family: 'inselTitilium', sans-serif;
+    font-weight: 700;
 }
