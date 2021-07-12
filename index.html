@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/css/style.css">
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="./dist/js/app.js"></script>
+    <script src="./resources/js/app.js"></script>
+    <script src="./resources/js/app_vue.js"></script>
     <title>Inselbrauerei</title>
 </head>
 <body>
@@ -192,27 +193,8 @@
         </section>
     </main>
     <!-- contact form from vue-component -->
-    <!-- <div id="app">
-        <contactForm></contactForm>
-    </div> -->
-    <div class="contact_us">
-        <h3>Contact Us</h3>
-        <form
-        action="https://demo-inselbrauerei.dmc/resources/php/send.php"
-        method="POST"
-        class="contact-form">
-            <label for="">Your Name:</label>
-            <div class="input_name">
-                <input type="text" placeholder="Full Name" name="user_name"/>
-            </div>
-            <label for="">Your E-Mail:</label>
-            <div class="interactive-components">
-                <input type="text" name="user_email" placeholder="E-Mail"/>
-                <label for="">Message:</label>
-                <textarea name="user_message" cols="30" rows="10" placeholder="Your message.."></textarea>
-                <input type="submit" value="Send" class="submit"/>
-            </div>
-        </form>
+    <div id="app">
+        <contact-form/>
     </div>
     <!-- Footer -->
     <footer>
@@ -255,10 +237,8 @@
             </form>
         </div>
     </footer>    
-
     <!-- import component -->
     <script src="./resources/js/Components/ContactForm.js"></script>
-
     <!-- mount app -->
     <script>
         const mountedApp = app.mount('#app')

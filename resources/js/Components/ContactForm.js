@@ -1,8 +1,8 @@
-app.component('contactForm', {
+app.component('contact-form', {
     template: 
     /* html */
-    <div class="contact_us">
-        <h3>Contact Us</h3>
+    `<div class="contact_us">
+        <h2 style="padding-top: 16px; text-align: center; font-size: 30px">Contact Us</h2>
         <form
         action="https://demo-inselbrauerei.dmc/resources/php/send.php"
         method="POST"
@@ -19,5 +19,5 @@ app.component('contactForm', {
                 <input type="submit" value="Send" class="submit"/>
             </div>
         </form>
-    </div>
+    </div>`
 })
