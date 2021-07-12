@@ -848,6 +848,10 @@ footer .newsletter .newsletter__interaction .newsletter-cta {
   }
   .contact_us .contact-form {
     width: 60%;
+    margin-left: 300px;
+  }
+  .contact_us .contact-form input, .contact_us .contact-form textarea {
+    width: 80%;
   }
   .contact_us .contact-form .submit {
     width: 50%;
