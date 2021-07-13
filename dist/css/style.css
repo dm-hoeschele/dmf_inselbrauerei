@@ -1,0 +1,763 @@
+/* variables and font-faces */
+/* import of fontface */
+@font-face {
+  font-family: inselGearedSlap;
+  src: url(/fonts/GearedSlab.ttf?0caa168a41cd2ffb4122227a8ae0220b);
+}
+@font-face {
+  font-family: inselTitiliumReg;
+  src: url(/fonts/TitilliumWeb-Regular.ttf?522ebad20fa0808ac28478e2f0e48cb8);
+}
+@font-face {
+  font-family: inselTitiliumBold;
+  src: url(/fonts/TitilliumWeb-Bold.ttf?6d6124d11999b7ca6dea808d5db13c4c);
+}
+/* generals */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #231f20;
+  background-color: #eeece4;
+  font-family: "inselGearedSlap", sans-serif;
+}
+
+/* mobile width: 375px */
+/* navbar */
+.nav-wrapper {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  z-index: 1;
+  padding-bottom: 10px;
+  /* shop - subcategories */
+}
+.nav-wrapper nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+.nav-wrapper nav #menu-items {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  height: 16vh;
+  display: none;
+}
+.nav-wrapper nav #menu-items.active {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 100%;
+  height: 22vh;
+  display: block;
+  -webkit-animation: ease 0.5s;
+          animation: ease 0.5s;
+  background-color: #231f20;
+  opacity: 1;
+  padding: 10px;
+  z-index: 5;
+  line-height: 25px;
+  margin-left: 52px;
+}
+.nav-wrapper nav #menu-items.active a {
+  color: #eeece4;
+}
+.nav-wrapper nav #menu-items .menu-item {
+  padding: 22px 14px;
+  text-decoration: none;
+  color: #231f20;
+  cursor: pointer;
+  transition: 0.5ms;
+}
+.nav-wrapper nav #menu-items .menu-itemhover {
+  color: darkgray;
+  transition: 0.5ms;
+}
+.nav-wrapper nav #menu-items .menu-item i .arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: none;
+  padding: 3px 3px 3px 3px;
+  transform: rotate(45deg);
+  margin-left: 5px;
+  position: absolute;
+  top: 33px;
+}
+.nav-wrapper nav .nav__logo img {
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 5px;
+  left: 100px;
+}
+.nav-wrapper nav #nav__user-bereich {
+  display: flex;
+  gap: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: -135px;
+  justify-content: center;
+  z-index: 2;
+  width: 100%;
+}
+.nav-wrapper nav #menu-items.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85%;
+  height: 22vh;
+  display: block;
+  -webkit-animation: ease 0.5s;
+          animation: ease 0.5s;
+  background-color: #231f20;
+  opacity: 1;
+  padding: 10px;
+  z-index: 5;
+  line-height: 25px;
+}
+.nav-wrapper #shop_subcategories {
+  list-style-type: none;
+  position: absolute;
+  top: 52px;
+  left: 70px;
+  background-color: #ffffff;
+  padding: 10px 65px 10px 20px;
+  line-height: 30px;
+  font-size: 14px;
+  display: none;
+}
+.nav-wrapper #hamburger {
+  margin: 0;
+  margin-left: 15px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: opacity 0.3s;
+  padding-right: 5px;
+  padding-top: 10px;
+}
+.nav-wrapper #hamburgerhover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.nav-wrapper #hamburger .line {
+  width: 40px;
+  height: 3px;
+  background: #231f20;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+.nav-wrapper #hamburger.isactive .line:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+.nav-wrapper #hamburger.isactive .line:nth-child(2) {
+  opacity: 0;
+}
+.nav-wrapper #hamburger.isactive .line:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* main */
+/* hero-section */
+.hero-section {
+  background: center bottom no-repeat url(/images/Meerjungfrau_Genuss_07_CL7_4722.svg?d10c6655d5812a74f09f28aad9fdfc7d);
+  background-size: cover;
+  height: 45vh;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: -31px;
+  margin-bottom: -15px;
+}
+.hero-section .hero-section__hook {
+  position: absolute;
+  width: 375px;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  padding: 16px;
+}
+.hero-section .hero-section__bg {
+  background: no-repeat url(/images/Shape_hero_hook.svg?ced24d26d8ff4d19ab6a32da8b7f5de0);
+  background-position: bottom 70px left -5px;
+  background-size: 315px;
+  padding: 80px 48px;
+}
+.hero-section .hero-section__bg .hero-section__hook-text {
+  color: #231f20;
+  line-height: 20px;
+  font-size: 14px;
+}
+.hero-section .hero-section__bg .hero-section__hook-text p {
+  font-family: "inselTitilium", sans-serif;
+}
+.hero-section .hero-section__bg .hero-section__hook-text h1 {
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 40px;
+  width: 100%;
+}
+.hero-section .hero-section__bg .hero-section__hook-cta {
+  margin-top: 16px;
+  border: none;
+  background-color: #dad260;
+  border-radius: 5px;
+  padding: 10px 5px;
+  width: 200px;
+  position: absolute;
+  top: 220px;
+  left: 80px;
+  cursor: pointer;
+  font-family: "inselTitilium", sans-serif;
+  font-weight: 700;
+}
+
+/* Section 1 - Beer Range */
+.special-selection {
+  background: center center no-repeat url(/images/beer_range_bg.svg?2f81324690020d734affe94b7d9d38a2);
+  background-size: 10000px 2115px;
+  text-align: center;
+  padding: 32px 0;
+  margin-top: -40px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.special-selection .special-selection__header h3, .special-selection .contact_us h3 {
+  font-size: 25px;
+  height: 40px;
+  padding-top: 30px;
+}
+.special-selection .special-selection__beer-text h3 {
+  text-transform: uppercase;
+}
+.special-selection .special-selection__beer {
+  padding-top: 3rem;
+}
+.special-selection .beer-titel, .special-selection .beer-preis {
+  font-weight: bold;
+}
+.special-selection .beer-size, .special-selection .beer-pfand {
+  font-size: 0.7rem;
+  font-family: "inselTitiliumReg", sans-serif;
+}
+.special-selection .beer_infos {
+  font-family: "inselTitiliumBold", sans-serif;
+}
+.special-selection .last {
+  padding-bottom: 20px;
+}
+
+/* Section 2 - Advertising */
+.ads {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8px;
+  margin-top: -20px;
+}
+.ads .advertising-text {
+  font-size: 16px;
+  padding-top: 16px;
+  line-height: 21px;
+  font-family: "inselTitiliumReg";
+}
+.ads .advertising-text h2 {
+  font-size: 21px;
+  line-height: 24px;
+  padding-bottom: 8px;
+  font-family: "inselGearedSlap", sans-serif;
+  text-transform: uppercase;
+}
+.ads img {
+  width: 100%;
+  height: auto;
+}
+.ads .ads__right {
+  margin-top: 40px;
+}
+
+/* Section 3 - Awards */
+.awards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 4rem;
+}
+.awards img {
+  height: 143px;
+  width: 163px;
+}
+.awards .awards__left img {
+  width: 326px;
+  height: auto;
+}
+.awards .awards__mid {
+  flex-direction: row;
+}
+
+/* Contact Form */
+.contact_us h3 {
+  text-align: center;
+  padding-bottom: 16px;
+  text-transform: uppercase;
+}
+.contact_us .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+.contact_us .contact-form input, .contact_us .contact-form textarea {
+  padding: 3px 0 3px 5px;
+  width: 100%;
+}
+.contact_us .contact-form input:focus, .contact_us .contact-form textarea:focus {
+  outline: none !important;
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+.contact_us .contact-form .submit {
+  background-color: #dad260;
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-family: "inselTitilium", sans-serif;
+  font-weight: 700;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin: 16px 0;
+}
+.contact_us .contact-form .interactive-components {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Footer */
+/* Footer Section - Services and Informations */
+footer {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background: center center no-repeat url(/images/footer_bg.svg?a4881b09447684b21519160bed07de82);
+  background-size: 3350px 1000px;
+  color: #eeece4;
+  /* Footer Section - Social Media */
+  /* Footer Section - Newsletter */
+}
+footer h3 {
+  padding-bottom: 8px;
+}
+footer .services h3 {
+  padding-top: 30px;
+}
+footer .service, footer .information {
+  font-family: "inselTitiliumReg", sans-serif;
+}
+footer .informations, footer .services {
+  width: 150px;
+  padding-left: 35px;
+}
+footer .services .service, footer .informations .information {
+  list-style: none;
+}
+footer .services .service a, footer .informations .information a {
+  color: #231f20;
+  line-height: 1.4rem;
+  text-decoration: none;
+  color: #eeece4;
+}
+footer .socials {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 16px;
+}
+footer .newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .newsletter input {
+  background-color: #231f20;
+  border: 1px solid #ffff;
+  border-radius: 3px;
+  padding: 3px 0 3px 5px;
+}
+footer .newsletter h3 {
+  padding-bottom: 10px;
+}
+footer .newsletter .newsletter__interaction {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer .newsletter .newsletter__interaction .newsletter-cta {
+  background-color: #dad260;
+  border-radius: 3px;
+  border: none;
+  margin-top: 3px;
+}
+
+/* mobile width: 768px */
+/* navbar */
+@media screen and (min-width: 768px) {
+  /* navbar */
+  .nav-wrapper {
+    height: 90px;
+    width: 100%;
+  }
+  .nav-wrapper nav #menu-items.active {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 85%;
+    height: 14vh;
+    -webkit-animation: fade 0.5s;
+            animation: fade 0.5s;
+    background-color: #231f20;
+    opacity: 1;
+    padding-top: 20px;
+    z-index: 5;
+    line-height: 20px;
+  }
+  .nav-wrapper nav .nav__logo img {
+    width: 280px;
+    height: 100px;
+    position: absolute;
+    top: -15px;
+    left: 220px;
+  }
+  .nav-wrapper nav #nav__user-bereich img {
+    width: 35px;
+    position: absolute;
+    right: 150px;
+  }
+  .nav-wrapper nav #nav__user-bereich .user-icon {
+    width: 30px;
+    margin-right: 55px;
+  }
+  .nav-wrapper nav .arrow {
+    display: none;
+  }
+
+  /* hero-section */
+  .hero-section {
+    margin-bottom: -5.5px;
+  }
+  .hero-section .hero-section__hook {
+    position: absolute;
+    left: 75%;
+    top: 35%;
+    transform: translate(-75%, -50%);
+    padding: 16px;
+  }
+
+  /* beer selection */
+  .special-selection {
+    background: center center no-repeat url(/images/beer_range_bg.svg?2f81324690020d734affe94b7d9d38a2);
+    background-size: 2500px 2115px;
+    text-align: center;
+    padding: 32px 0;
+    margin-top: -50px;
+  }
+  .special-selection .special-selection__header {
+    font-size: 22px;
+  }
+  .special-selection .special-selection__beers {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  /* advertising */
+  .advertising {
+    display: flex;
+    gap: 16px;
+  }
+  .advertising .ads__right {
+    margin-top: 0;
+  }
+
+  .awards {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 16px;
+  }
+  .awards .awards__group {
+    gap: 16px;
+  }
+
+  /* contact form */
+  .contact-form {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  .contact-form .submit {
+    padding: 10px 0;
+    margin: 16px 0;
+  }
+
+  /* footer-section - services and informations */
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+/* mobile width: 1024px */
+/* navbar */
+@media screen and (min-width: 1024px) {
+  /* navbar */
+  .nav-wrapper {
+    flex-direction: row;
+    height: 60px;
+    /* shop-subcategories */
+  }
+  .nav-wrapper #hamburger {
+    display: none;
+  }
+  .nav-wrapper nav {
+    gap: 200px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 80px;
+  }
+  .nav-wrapper nav #menu-items {
+    text-align: left;
+    height: 100%;
+    align-self: center;
+    width: 100%;
+    height: 16vh;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+  }
+  .nav-wrapper nav #menu-items .menu-item .arrow {
+    position: absolute;
+    top: 20px;
+    left: 90px;
+    border: 1px solid blue;
+    display: none;
+    border-style: solid;
+    border-color: black;
+    -o-border-image: initial;
+       border-image: initial;
+    border-width: 0px 3px 3px 0px;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-left: 5px;
+  }
+  .nav-wrapper nav .nav__logo img {
+    position: absolute;
+    top: -27px;
+    left: 550px;
+    width: 200px;
+  }
+  .nav-wrapper nav #nav__user-bereich {
+    gap: 32px;
+    cursor: pointer;
+    justify-content: space-evenly;
+    z-index: 2;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 5px;
+    right: -95px;
+    padding-top: 8px;
+  }
+  .nav-wrapper nav #nav__user-bereich img {
+    width: 25px;
+  }
+  .nav-wrapper nav #nav__user-bereich .user-icon {
+    width: 20px;
+  }
+  .nav-wrapper #shop_subcategories.active {
+    display: block;
+    position: absolute;
+    left: 50px;
+  }
+  .nav-wrapper #shop_subcategories .shop_subcategory {
+    color: #231f20;
+    text-decoration: none;
+    transition: 0.5ms ease;
+  }
+  .nav-wrapper #shop_subcategories .shop_subcategory:hover {
+    color: darkgray;
+    transition: 0.5ms;
+  }
+
+  /* hero-section */
+  .hero-section {
+    height: 70vh;
+    margin-bottom: -10px;
+  }
+  .hero-section h1 {
+    font-size: 32px;
+  }
+  .hero-section .hero-section__hook {
+    position: absolute;
+    left: 75%;
+    top: 40%;
+    transform: translate(-75%, -50%);
+    padding: 16px;
+  }
+  .hero-section .hero-section__hook .hero-section__bg {
+    background-position: center 70px left -15px;
+    background-size: 330px;
+  }
+
+  /* beer selection */
+  .special-selection {
+    text-transform: uppercase;
+  }
+  .special-selection .special-selection__header {
+    font-size: 28px;
+  }
+  .special-selection .special-selection__beers {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  /* advertising */
+  .advertising {
+    display: flex;
+    gap: 16px;
+    padding: 20px 10px;
+  }
+  .advertising .ads__right {
+    margin-top: 0;
+  }
+
+  .awards {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .awards .awards__group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* contact form */
+  .contact_us {
+    width: 100%;
+  }
+  .contact_us .contact-form {
+    width: 60%;
+    margin-left: 300px;
+  }
+  .contact_us .contact-form input, .contact_us .contact-form textarea {
+    width: 80%;
+  }
+  .contact_us .contact-form .submit {
+    width: 50%;
+  }
+
+  /* footer-section - services and informations */
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1115px) {
+  nav .nav__logo img {
+    margin-left: 110px;
+  }
+
+  .hero-section {
+    height: 80vh;
+    margin-bottom: 5px;
+  }
+  .hero-section .hero-section__hook {
+    width: 400px;
+  }
+  .hero-section .hero-section__hook .hero-section__bg {
+    background-position: bottom 50px left -15px;
+    background-size: 400px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: absolute;
+    left: 75%;
+    top: 110%;
+    transform: translate(-75%, -30%);
+  }
+  .hero-section .hero-section__hook .hero-section__bg .hero-section__hook-cta {
+    position: absolute;
+    top: 200px;
+  }
+
+  .special-selection {
+    background-size: 1550px 2200px;
+    background-position: top 100px;
+    text-align: center;
+    padding: 32px 0;
+    margin-top: -2px;
+  }
+
+  .advertising {
+    padding: 120px 280px;
+  }
+
+  .awards {
+    justify-content: space-evenly;
+    padding-bottom: 16px;
+  }
+  .awards .awards__group {
+    display: flex;
+    flex-direction: row;
+    margin-left: -210px;
+    gap: 32px;
+  }
+
+  /* contact form */
+  .contact_us {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .contact_us .contact-form {
+    width: 60%;
+  }
+  .contact_us .contact-form .submit {
+    width: 50%;
+  }
+
+  /* footer */
+  footer .logo_socials .company_logo {
+    width: 200px;
+    text-align: center;
+  }
+  footer .logo_socials .socials {
+    width: 200px;
+  }
+  footer .newsletter h3 {
+    padding-bottom: 10px;
+  }
+}

@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/css/style.css">
-    <script src="./resources/js/app.js" defer></script>
+    <!-- import vuejs -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- import jquery-api -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    
+    <!-- import vue-createApp -->
+    <script src="./resources/js/app_vue.js"></script>
     <title>Inselbrauerei</title>
 </head>
 <body>
@@ -190,14 +196,9 @@
             </div>
         </section>
     </main>
-    <div class="contact-form">
-        <form action="https://demo-inselbrauerei.dmc/resources/php/send.php" method="POST" class="form-inline">
-            <label for="">Bitte E-Mail eingeben:</label>
-            <div class="interactive-components">
-                <input type="text" name="senders_email" placeholder="E-Mail" class="form-control">
-                <input type="submit" value="Senden" class="submit btn">
-            </div>
-        </form>
+    <!-- contact form from vue-component -->
+    <div id="app">
+        <contact-form/>
     </div>
     <!-- Footer -->
     <footer>
@@ -239,6 +240,16 @@
                 </div>
             </form>
         </div>
-    </footer>
+    </footer>    
+
+   
+    <!-- import component -->
+    <script src="./resources/js/Components/ContactForm.js"></script>
+     <!-- import js-file -->
+     <script src="./resources/js/app.js"></script>
+    <!-- mount app -->
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
 </body>
 </html>
