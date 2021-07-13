@@ -443,11 +443,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
-  /* span {
-                #status {
-                    color: green;
-                } 
-            } */
 }
 
 /* Footer */
